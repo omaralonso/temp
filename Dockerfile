@@ -1,7 +1,8 @@
 #FROM tomcat:8.0
 #FROM tomcat:8.5
-FROM tomcat:8.0-alpine
-RUN apk --no-cache add curl
+FROM tomcat:8.5
+#FROM tomcat:8.0-alpine
+#RUN apk --no-cache add curl
 LABEL maintainer="omar.rosadio@unmsm.edu.pe"
 USER root
 COPY tomcat-users.xml /usr/local/tomcat/conf/
