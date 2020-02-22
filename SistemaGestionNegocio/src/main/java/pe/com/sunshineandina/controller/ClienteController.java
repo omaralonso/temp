@@ -7,6 +7,7 @@ package pe.com.sunshineandina.controller;
 
 import com.fasterxml.jackson.databind.JsonNode;
 import java.util.Calendar;
+import java.util.List;
 import javax.servlet.http.HttpSession;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
@@ -16,6 +17,7 @@ import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.ResponseBody;
 import pe.com.sunshineandina.dto.CarritoTO;
 import pe.com.sunshineandina.dto.DistribuidorTO;
+import pe.com.sunshineandina.dto.PedidoTO;
 import pe.com.sunshineandina.dto.UsuarioTO;
 import pe.com.sunshineandina.mapper.ResponseMapper;
 import pe.com.sunshineandina.service.CarritoService;
@@ -75,4 +77,20 @@ public class ClienteController {
 
         return jsonRespuesta;
     }
+    
+    @RequestMapping(value = "/cliente/listapedidos", method = RequestMethod.GET)
+    public String obtenerListaPedidos(HttpSession session, Model model) {
+
+        /* Hallamos el usuario logeado */
+        UsuarioTO usuario = (UsuarioTO) session.getAttribute("usuario");
+        int idUsuario = usuario.getIdUsuario();
+        model.addAttribute("usuario", usuario);
+        
+        /* Pedidos del usuario cliente o distribuidor */
+        List<PedidoTO> pedidos = pedidoService.findPedidoByIdUsuario(idUsuario);
+        model.addAttribute("pedidos", pedidos);
+
+        return "cliente/pedidos";
+    }
+    
 }

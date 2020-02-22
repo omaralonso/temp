@@ -19,6 +19,8 @@ public interface PedidoService {
     
     PedidoTO findPedidoById(int id);
     
+    List<PedidoTO> findPedidoByIdUsuario(int idUsuario);
+    
     void actualizarPedido(PedidoTO pedido);
     
     String nuevoPedido(int idUsuario);

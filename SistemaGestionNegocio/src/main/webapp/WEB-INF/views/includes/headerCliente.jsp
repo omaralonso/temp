@@ -30,7 +30,7 @@
 
 <ul class="navbar-nav mr-auto">
     <li class="nav-item nav-item-section">
-        <a class="nav-link" href="#">
+        <a class="nav-link" href="${pageContext.request.contextPath}/cliente/listapedidos">
             <i class="fa fa-shopping-bag" aria-hidden="true"></i>
             Mis Pedidos
         </a>

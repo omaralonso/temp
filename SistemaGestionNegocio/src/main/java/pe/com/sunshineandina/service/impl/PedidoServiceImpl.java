@@ -69,6 +69,13 @@ public class PedidoServiceImpl implements PedidoService {
     }
 
     @Override
+    public List<PedidoTO> findPedidoByIdUsuario(int idUsuario){
+        ClienteTO cliente = clienteDao.findByUsuario(idUsuario);
+        List<PedidoTO> listaPedidos = pedidoDao.findByCliente(cliente.getIdCliente());
+        return listaPedidos;
+    }
+    
+    @Override
     public PedidoTO findPedidoById(int id) {
         PedidoTO pedido = pedidoDao.findById(id);
         return pedido;

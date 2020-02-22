@@ -40,7 +40,7 @@ public class DetallePedidoTO implements Serializable {
     @Column(name = "puntos_detalle_pedido")
     private int puntosDetallePedido;
 
-    @ManyToOne(fetch = FetchType.LAZY)
+    @ManyToOne(fetch = FetchType.EAGER)
     @JoinColumn(name = "id_producto")
     private ProductoTO producto;
 
