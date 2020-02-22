@@ -18,7 +18,7 @@
             <div class="row text-center">
                 <c:forEach items="${lstProductos}" var="producto">
                 <div class="col-sm-6 col-md-3">
-                    <img src="http://pe.sunshineandina.com/media/catalog/product/cache/3/small_image/9df78eab33525d08d6e5fb8d27136e95/c/a/carbo-grabbers-peru-noviembre2017.png"
+                    <img src="${producto.imagenProducto}"
                          class="img-fluid">
                     <h4><c:out value="${producto.nombreProducto}"></c:out></h4>
                     <div class="text-muted">Precio: S/.<c:out value="${producto.precioProducto}"></c:out></div>

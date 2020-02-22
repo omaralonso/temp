@@ -152,16 +152,16 @@ public class GenericoController {
         return "redirect:/perfil";
     }
     
-    @RequestMapping(value = "/cambiarContraseña", method = RequestMethod.GET)
-    public String cambiarContraseña(){
+    @RequestMapping(value = "/cambiarContraseÃ±a", method = RequestMethod.GET)
+    public String cambiarContraseÃ±a(){
         
-        return "general/cambiarContraseña";
+        return "general/cambiarContraseÃ±a";
     }
     
     @RequestMapping(value = "/passwordCorrecta", method = RequestMethod.POST)
     @ResponseBody
     public JsonNode verificarPasswordCorrecta(@RequestBody ObjectNode nodoJson, HttpSession session){
-        /* Obtenemos las contraseñas del json */
+        /* Obtenemos las contraseï¿½as del json */
         String passwordPosible = nodoJson.get("passwordActual").asText();
         String passwordNueva = nodoJson.get("passwordNueva").asText();
         String passwordConfirmacion = nodoJson.get("passwordConfirmacion").asText();

@@ -32,9 +32,9 @@ public class Constantes {
     
     //**************************** MENSAJES ERROR *************************
     public static final String ERROR_AUTENTICACION_USERNAME = "Este usuario no existe";
-    public static final String ERROR_AUTENTICACION_PASSWORD = "Contraseña errada";
+    public static final String ERROR_AUTENTICACION_PASSWORD = "ContraseÃ±a errada";
 
-    public static final String ERROR_CONTRASEÑAS_NO_COINCIDEN = "Las contraseñas no coinciden"; 
+    public static final String ERROR_CONTRASEÃ‘AS_NO_COINCIDEN = "Las contraseÃ±as no coinciden"; 
     
     public static final String ERROR_CATEGORIA_REPETIDA="La categoria ingresada ya existe";
     
@@ -42,10 +42,10 @@ public class Constantes {
     public static final String ERROR_STOCK_AGOTADO = "Lo sentimos, se han agotado las unidades de %s $";
     public static final String ERROR_STOCK_INSUFICIENTE = "Lo sentimos, solo quedan %d unidades de %s $";
     
-    public static final String ERROR_GENERICO_PEDIDO = "Ocurrió un error al intentar procesar el pedido";
+    public static final String ERROR_GENERICO_PEDIDO = "OcurriÃ³ un error al intentar procesar el pedido";
     
     /**************************** MENSAJES DE EXITO ****************************/
-    public static final String PRODUCTO_CARRITO_EXITO = "Se agregó el producto al carrito";
+    public static final String PRODUCTO_CARRITO_EXITO = "Se agregÃ³ el producto al carrito";
     
-    public static final String PEDIDO_REGISTRADO_EXITO = "Se registró el pedido con éxito";
+    public static final String PEDIDO_REGISTRADO_EXITO = "Se registrÃ³ el pedido con Ã©xito";
 }

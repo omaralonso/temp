@@ -72,13 +72,13 @@ public class DatosPersonalesServiceImpl implements DatosPersonalesService{
     public String validarPassword(String passwordActual, String passwordNueva, String passwordConfirmacion, UsuarioTO usuario) {
         String rpta = null;
         
-        /* vemos si las contraseñas coinciden */
+        /* vemos si las contraseï¿½as coinciden */
         if(!passwordNueva.equals(passwordConfirmacion)){
-            rpta = Constantes.ERROR_CONTRASEÑAS_NO_COINCIDEN;
+            rpta = Constantes.ERROR_CONTRASEÃ‘AS_NO_COINCIDEN;
             return rpta;
         }
         
-        /* vemos si la contraseña es correcta */
+        /* vemos si la contraseï¿½a es correcta */
         String hashedPasswordActual = HashPassword.hashPassword(passwordActual);
         if(!hashedPasswordActual.equals(usuario.getPassUsuario())){
             rpta = Constantes.ERROR_AUTENTICACION_PASSWORD;
