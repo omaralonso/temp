@@ -48,7 +48,7 @@
         
         <c:if test="${carrito == null}">
         
-        <div class="col-md-5 col-sm-6">
+        <div class="center-block">
             <div class="card text-center">
                 <div class="card-block">
                   <h4 class="card-title">Carrito de Compras</h4>
