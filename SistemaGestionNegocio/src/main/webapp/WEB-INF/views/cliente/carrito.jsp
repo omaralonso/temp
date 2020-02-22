@@ -48,7 +48,7 @@
         
         <c:if test="${carrito == null}">
         
-        <div class="center-block">
+        <div class="offset-md-4 col-md-4 col-sm-4">
             <div class="card text-center">
                 <div class="card-block">
                   <h4 class="card-title">Carrito de Compras</h4>
