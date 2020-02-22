@@ -1,0 +1,57 @@
+html, body{
+    margin:0;
+    padding:0;
+    font-family: 'Montserrat', sans-serif;
+    background-image:url("../images/fondo.png");
+    background-attachment: fixed;
+}
+tbody a{
+    color: black;
+}
+tbody a:hover{
+    color: orange;
+}
+tbody button:hover{
+    color: orange;
+}
+button{
+    background:0;
+}
+.drop:hover{
+    color: orange;
+}
+img.nav-image{
+    width: 150px;
+    margin-right:50px;
+}
+input[type=submit], button{
+    cursor:pointer;
+}
+header{
+    margin-bottom:105px;
+}
+.color-sunshine{
+    background-color: #AFDDB0;
+}
+.nav-item-section{
+    font-size:20px;
+}
+.icon{
+    width:100px;
+}
+#footer{
+    padding:15px;
+    font-size:20px;
+    margin-top:100px;
+}
+.centrar-texto-modal{
+    margin:0 auto;
+}   
+.login{
+    padding:30px;
+    background-color:white;
+    border-radius:40px;
+}
+#inicio,#fin{
+    background-color: white;
+}
