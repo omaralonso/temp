@@ -45,6 +45,20 @@
             </div>
         </div>
         </c:if>
+        
+        <c:if test="${carrito == null}">
+        
+        <div class="col-md-5 col-sm-6">
+            <div class="card text-center pull-left">
+                <div class="card-block">
+                  <h4 class="card-title">Carrito de Compras</h4>
+                  <p class="card-text">Tu carrito está vacío</p>
+                  <button class="btn btn-warning" id="btnRegistrarPedido" data-toggle="modal" data-target="#modalPedidoConfirmar" disabled>Registrar el pedido</button>
+                </div>
+            </div>
+        </div>
+        </c:if>
+        
     </div>
 </div>
 
