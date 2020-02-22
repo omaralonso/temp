@@ -56,7 +56,7 @@ public class LoginServiceImpl implements LoginService {
         }
 
         
-        String hashedPassword = HashPassword.hashPassword(usuarioPosible.getPassUsuario());
+        String hashedPassword = usuarioPosible.getPassUsuario();
 
         // Password equivocada
         if (!usuario.getPassUsuario().equals(hashedPassword)) {
