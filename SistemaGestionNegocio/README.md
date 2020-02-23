@@ -60,7 +60,7 @@
 
 ### Archivos fuente:
 
-* Tener presente la nomenclatura por cada paquete (Ejm: en el paquete pe.com.sunshineandina.service -> ClaseService y ClaseServiceImpl)
+* Tener presente la nomenclatura por cada paquete (Ejm: en el paquete pe.com.brunominelli.service -> ClaseService y ClaseServiceImpl)
 
 * Comentar los métodos (al menos para saber que hace y retorna)
 
@@ -75,4 +75,4 @@
 * Deployar el .war en el servidor y arrancar la aplicación (Si se hizo la construcción desde el IDE probablemente ya esté deployado)
 
 
-&copy; Sunshine Andina S.A.
+&copy; BrunoMinelli S.A.

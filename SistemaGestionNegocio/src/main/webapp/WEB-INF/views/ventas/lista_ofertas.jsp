@@ -1,4 +1,4 @@
-<%@page import="pe.com.sunshineandina.util.Constantes"%>
+<%@page import="pe.com.brunominelli.util.Constantes"%>
 <%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
 
 <%@include file="../includes/headerVentas.jsp" %>
