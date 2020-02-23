@@ -1,8 +1,3 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
 package pe.com.sunshineandina.dao.impl;
 
 import org.hibernate.Criteria;
@@ -12,10 +7,6 @@ import pe.com.sunshineandina.dao.AbstractDAO;
 import pe.com.sunshineandina.dao.CarritoDAO;
 import pe.com.sunshineandina.dto.CarritoTO;
 
-/**
- *
- * @author alonsorn
- */
 @Repository("carritoDao")
 public class CarritoDaoImpl extends AbstractDAO<Integer, CarritoTO> implements CarritoDAO {
 

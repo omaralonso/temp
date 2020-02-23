@@ -1,9 +1,3 @@
-<%-- 
-    Document   : lista_ofertas
-    Created on : 03/11/2017, 01:52:38 PM
-    Author     : FERNANDO
---%>
-
 <%@page import="pe.com.sunshineandina.util.Constantes"%>
 <%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
 

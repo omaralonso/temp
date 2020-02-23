@@ -1,8 +1,3 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
 package pe.com.sunshineandina.dao.impl;
 
 import java.util.List;
@@ -12,14 +7,9 @@ import org.hibernate.criterion.Restrictions;
 import org.springframework.stereotype.Repository;
 import pe.com.sunshineandina.dao.AbstractDAO;
 import pe.com.sunshineandina.dao.ProductoDAO;
-import pe.com.sunshineandina.dto.CategoriaTO;
 import pe.com.sunshineandina.dto.ProductoTO;
 import pe.com.sunshineandina.util.Constantes;
 
-/**
- *
- * @author alonsorn
- */
 @Repository("productoDao")
 public class ProductoDaoImpl extends AbstractDAO<Integer, ProductoTO> implements ProductoDAO {
 
@@ -63,7 +53,7 @@ public class ProductoDaoImpl extends AbstractDAO<Integer, ProductoTO> implements
         return (List<ProductoTO>) criteria.list();
     }
 
-    //Mostrar productos en inventario, estén o no disponibles
+    //Mostrar productos en inventario, esten o no disponibles
     @Override
     public List<ProductoTO> findInventario() {
         Criteria criteria = createEntityCriteria();
@@ -73,7 +63,7 @@ public class ProductoDaoImpl extends AbstractDAO<Integer, ProductoTO> implements
         return (List<ProductoTO>) criteria.list();
     }
 
-    //Mostrar productos en tienda, SOLO disponibles, con paginación
+    //Mostrar productos en tienda, SOLO disponibles, con paginacion
     @Override
     public List<ProductoTO> findPaginado(int inicio, int cantidadPagina) {
         Criteria criteria = createEntityCriteria();

@@ -1,8 +1,3 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
 package pe.com.sunshineandina.dao.impl;
 
 import org.hibernate.Criteria;
@@ -13,10 +8,6 @@ import pe.com.sunshineandina.dao.UsuarioDAO;
 import pe.com.sunshineandina.dto.UsuarioTO;
 import pe.com.sunshineandina.util.Constantes;
 
-/**
- *
- * @author alonsorn
- */
 @Repository("usuarioDao")
 public class UsuarioDAOImpl extends AbstractDAO<Integer, UsuarioTO> implements UsuarioDAO{
 

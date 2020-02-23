@@ -1,9 +1,3 @@
-<%-- 
-    Document   : headerCliente
-    Created on : 25-nov-2017, 19:31:04
-    Author     : alonsorn
---%>
-
 <%@ include file="../includes/head.jsp"%>
 
 <%@ include file="../includes/navhead.jsp"%>

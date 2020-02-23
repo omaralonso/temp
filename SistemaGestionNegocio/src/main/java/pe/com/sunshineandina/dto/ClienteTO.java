@@ -1,8 +1,3 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
 package pe.com.sunshineandina.dto;
 
 import java.io.Serializable;
@@ -17,10 +12,6 @@ import javax.persistence.JoinColumn;
 import javax.persistence.OneToOne;
 import javax.persistence.Table;
 
-/**
- *
- * @author alonsorn
- */
 @Entity(name = "Cliente")
 @Table(name = "TSA_CLIENTE")
 public class ClienteTO implements Serializable {

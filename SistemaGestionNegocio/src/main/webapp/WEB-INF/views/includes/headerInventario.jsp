@@ -1,10 +1,3 @@
-<%-- 
-    Document   : headerInventario
-    Created on : 03/11/2017, 01:09:54 PM
-    Author     : FERNANDO
---%>
-
-
 <%@ include file="../includes/head.jsp"%>
 
 <%@ include file="../includes/navhead.jsp"%>

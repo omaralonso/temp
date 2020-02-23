@@ -1,8 +1,3 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
 package pe.com.sunshineandina.interceptor;
 
 import javax.servlet.http.HttpServletRequest;
@@ -13,10 +8,6 @@ import org.springframework.web.servlet.handler.HandlerInterceptorAdapter;
 import pe.com.sunshineandina.dto.PerfilTO;
 import pe.com.sunshineandina.util.Constantes;
 
-/**
- *
- * @author alonsorn
- */
 public class InventarioInterceptor extends HandlerInterceptorAdapter {
 
     @Autowired
@@ -37,9 +28,6 @@ public class InventarioInterceptor extends HandlerInterceptorAdapter {
                     request.getRequestURI().matches("/SistemaGestionNegocio/inventario/listaCategorias.*") ||
                     request.getRequestURI().matches("/SistemaGestionNegocio/inventario/listaProductos.*")) ){
                 switch(codigoPerfil){
-                    case Constantes.PERFIL_ENCARGADO_ADM:
-                        response.sendRedirect("/SistemaGestionNegocio/admin/listaEmpleados");
-                        return false;
                     default:
                         response.sendRedirect("/SistemaGestionNegocio/");
                         return false;

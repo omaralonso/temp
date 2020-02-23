@@ -1,9 +1,3 @@
-<%-- 
-    Document   : headerAdmin
-    Created on : 03/11/2017, 01:10:02 PM
-    Author     : FERNANDO
---%>
-
 <%@ include file="../includes/head.jsp"%>
 
 <%@ include file="../includes/navhead.jsp"%>

@@ -1,9 +1,3 @@
-<%-- 
-    Document   : producto
-    Created on : 01/11/2017, 07:31:50 PM
-    Author     : FERNANDO
---%>
-
 <%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
 
 <%@include file="../includes/headerInventario.jsp"%>

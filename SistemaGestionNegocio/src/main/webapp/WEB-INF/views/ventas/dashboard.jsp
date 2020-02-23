@@ -1,9 +1,3 @@
-<%-- 
-    Document   : dashboard
-    Created on : 03/11/2017, 01:49:59 PM
-    Author     : FERNANDO
---%>
-
 <%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
 
 <%@include file="../includes/headerVentas.jsp" %>

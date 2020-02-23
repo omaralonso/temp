@@ -1,8 +1,3 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
 package pe.com.sunshineandina.configuration;
 
 import java.util.Properties;
@@ -19,10 +14,6 @@ import org.springframework.orm.hibernate4.HibernateTransactionManager;
 import org.springframework.orm.hibernate4.LocalSessionFactoryBean;
 import org.springframework.transaction.annotation.EnableTransactionManagement;
 
-/**
- *
- * @author alonsorn
- */
 @Configuration
 @EnableTransactionManagement
 @ComponentScan({"pe.com.sunshineandina.configuration"})

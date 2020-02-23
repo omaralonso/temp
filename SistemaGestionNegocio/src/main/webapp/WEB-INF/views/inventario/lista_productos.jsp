@@ -1,9 +1,3 @@
-<%-- 
-    Document   : lista_productos
-    Created on : 01/11/2017, 07:31:50 PM
-    Author     : FERNANDO
---%>
-
 <%@page import="pe.com.sunshineandina.dto.CategoriaTO"%>
 <%@page import="pe.com.sunshineandina.dto.ProductoTO"%>
 <%@page import="java.util.List"%>

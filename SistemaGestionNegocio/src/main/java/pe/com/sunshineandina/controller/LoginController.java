@@ -1,8 +1,3 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
 package pe.com.sunshineandina.controller;
 
 import java.util.Map;
@@ -17,10 +12,6 @@ import pe.com.sunshineandina.service.DatosPersonalesService;
 import pe.com.sunshineandina.service.LoginService;
 import pe.com.sunshineandina.util.Constantes;
 
-/**
- *
- * @author alonsorn
- */
 @Controller
 @RequestMapping("/")
 public class LoginController {
@@ -74,8 +65,6 @@ public class LoginController {
         switch (perfil.getCodigoPerfil()) {
             case Constantes.PERFIL_ENCARGADO_INV:
                 return "redirect:/inventario/listaProductos";
-            case Constantes.PERFIL_ENCARGADO_ADM:
-                return "redirect:/admin/listaEmpleados";
             case Constantes.PERFIL_ENCARGADO_VENTAS:
                 return "redirect:/ventas/listaPedidos";
             case Constantes.PERFIL_CLIENTE:

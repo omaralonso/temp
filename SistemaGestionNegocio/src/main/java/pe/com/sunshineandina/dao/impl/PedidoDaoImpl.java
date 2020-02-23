@@ -1,8 +1,3 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
 package pe.com.sunshineandina.dao.impl;
 
 import java.util.Date;
@@ -15,10 +10,6 @@ import pe.com.sunshineandina.dao.AbstractDAO;
 import pe.com.sunshineandina.dao.PedidoDAO;
 import pe.com.sunshineandina.dto.PedidoTO;
 
-/**
- *
- * @author alonsorn
- */
 @Repository("pedidoDao")
 public class PedidoDaoImpl extends AbstractDAO<Integer, PedidoTO> implements PedidoDAO{
 

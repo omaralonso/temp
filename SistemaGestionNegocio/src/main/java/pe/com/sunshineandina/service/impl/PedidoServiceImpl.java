@@ -1,8 +1,3 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
 package pe.com.sunshineandina.service.impl;
 
 import java.util.ArrayList;
@@ -25,10 +20,6 @@ import pe.com.sunshineandina.dto.ProductoTO;
 import pe.com.sunshineandina.service.PedidoService;
 import pe.com.sunshineandina.util.Constantes;
 
-/**
- *
- * @author FERNANDO
- */
 @Service("pedidoService")
 @Transactional(rollbackFor = Exception.class)
 public class PedidoServiceImpl implements PedidoService {

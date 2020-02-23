@@ -1,9 +1,3 @@
-<%-- 
-    Document   : pedido
-    Created on : 03/11/2017, 02:17:15 PM
-    Author     : FERNANDO
---%>
-
 <%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
 
 <%@include file="../includes/headerVentas.jsp" %>
