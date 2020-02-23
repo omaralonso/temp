@@ -23,46 +23,35 @@
 ### Usuarios
 
 #### Iniciar sesión
-![iniciarsesion](https://user-images.githubusercontent.com/26644850/33000529-a4e57dc0-cd76-11e7-8a65-13d2309bd6c5.PNG)
+![iniciarsesion](https://referencias-github.s3.amazonaws.com/usuario-iniciar-sesion.png)
 
-#### Registrar usuario
-![registrarusuario](https://user-images.githubusercontent.com/26644850/33000535-b27765fc-cd76-11e7-89ff-c38a27301508.PNG)
-
-#### Gestionar usuarios
-![usuarios](https://user-images.githubusercontent.com/26644850/33000544-ce82beae-cd76-11e7-866a-62a3ccebd3a6.PNG)
 
 #### Perfil usuario
-![perfil](https://user-images.githubusercontent.com/26644850/33000587-13e7c6ce-cd77-11e7-97b9-c0b3be15663d.PNG)
+![perfil](https://referencias-github.s3.amazonaws.com/usuario-perfil.png)
 
 #### Actualizar contraseña
-![actualizarcontrasena](https://user-images.githubusercontent.com/26644850/33000604-22b43fde-cd77-11e7-8cd4-cc7b07f91b93.PNG)
+![actualizarcontrasena](https://referencias-github.s3.amazonaws.com/usuario-actualizar-cont.png)
 
 
 ### Productos
 
-#### Gestionar productos
-![productos](https://user-images.githubusercontent.com/26644850/33000799-26668c94-cd78-11e7-951a-7897f45d0a05.PNG)
-
-#### Añadir un producto
-![agregarproducto](https://user-images.githubusercontent.com/26644850/33000608-3517669c-cd77-11e7-8afe-5b79c3491996.PNG)
-
-#### Editar un producto
-![editarproducto](https://user-images.githubusercontent.com/26644850/33000641-5ce3d098-cd77-11e7-9d21-e7f755b46799.PNG)
+#### Lista de productos
+![listaproductos](https://referencias-github.s3.amazonaws.com/catalogo-productos.png)
 
 
-### Categorías
+### Tienda
 
-#### Gestionar categorías
-![categorias](https://user-images.githubusercontent.com/26644850/33000632-51949fec-cd77-11e7-8312-98911c8ff19a.PNG)
+#### Carrito de compras
+![carrito de compras](https://referencias-github.s3.amazonaws.com/carrito-compras.png)
+
+#### Lista pedidos
+![lista pedidos](https://referencias-github.s3.amazonaws.com/lista-pedidos.png)
+
+#### Información empresa
+![info](https://referencias-github.s3.amazonaws.com/informacion-empresa.png)
 
 
-## Instrucciones para el team desarrollador:
-
-### Archivos fuente:
-
-* Tener presente la nomenclatura por cada paquete (Ejm: en el paquete pe.com.brunominelli.service -> ClaseService y ClaseServiceImpl)
-
-* Comentar los métodos (al menos para saber que hace y retorna)
+## Instrucciones:
 
 ### Para ejecutar la aplicación:
 
