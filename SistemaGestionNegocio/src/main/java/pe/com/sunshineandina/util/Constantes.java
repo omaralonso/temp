@@ -19,7 +19,6 @@ public class Constantes {
     public static final String PERFIL_ENCARGADO_ADM = "ADM";
     public static final String PERFIL_ENCARGADO_INV = "INV";
     public static final String PERFIL_CLIENTE = "CLI";
-    public static final String PERFIL_DISTRIBUIDOR = "DIS";
     public static final int TIPO_LIDER_DEFECTO=1;
     
     public static final String ESTADO_PEDIDO_PAGADO = "PAGADO";
@@ -28,7 +27,7 @@ public class Constantes {
     
     public static final int INICIO_PRODUCTOS_POR_PAGINA_POR_DEFECTO = 0;
     
-    public static final String PARAMETRIA_PRODUCTOS_POR_PAGINA = "PRODUCTOS_POR_PAGINA";
+    public static final String PARAMETRIA_PRODUCTOS_POR_PAGINA = "4";
     
     //**************************** MENSAJES ERROR *************************
     public static final String ERROR_AUTENTICACION_USERNAME = "Este usuario no existe";

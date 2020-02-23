@@ -9,10 +9,8 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 import pe.com.sunshineandina.dao.ClienteDAO;
-import pe.com.sunshineandina.dao.EmpleadoDAO;
 import pe.com.sunshineandina.dao.UsuarioDAO;
 import pe.com.sunshineandina.dto.ClienteTO;
-import pe.com.sunshineandina.dto.EmpleadoTO;
 import pe.com.sunshineandina.dto.UsuarioTO;
 import pe.com.sunshineandina.service.DatosPersonalesService;
 import pe.com.sunshineandina.util.Constantes;
@@ -30,16 +28,8 @@ public class DatosPersonalesServiceImpl implements DatosPersonalesService{
     private ClienteDAO clienteDao;
     
     @Autowired
-    private EmpleadoDAO empleadoDao;
-
-    @Autowired
     private UsuarioDAO usuarioDao;
     
-    @Override
-    public EmpleadoTO findEmpleadoByUsuario(int idUsuario) {
-        return empleadoDao.findByUsuario(idUsuario);
-    }
-
     @Override
     public ClienteTO findClienteByUsuario(int idUsuario) {
         return clienteDao.findByUsuario(idUsuario);
@@ -54,17 +44,6 @@ public class DatosPersonalesServiceImpl implements DatosPersonalesService{
             entity.setTelefonoCelular(cliente.getTelefonoCelular());
             entity.setTelefonoFijo(cliente.getTelefonoFijo());
             clienteDao.save(entity);
-        }
-    }
-
-    @Override
-    public void actualizarDatosEmpleado(EmpleadoTO empleado) {
-        if(empleado != null){
-            EmpleadoTO entity = empleadoDao.findById(empleado.getIdEmpleado());
-            entity.setEmail(empleado.getEmail());
-            entity.setTelefonoCelular(empleado.getTelefonoCelular());
-            entity.setTelefonoFijo(empleado.getTelefonoFijo());
-            empleadoDao.save(entity);
         }
     }
 
@@ -108,9 +87,7 @@ public class DatosPersonalesServiceImpl implements DatosPersonalesService{
             return cliente.getPrimerNombre().substring(0,1) + cliente.getPrimerNombre().substring(1).toLowerCase()
                     + " " + cliente.getPrimerApellido().substring(0,1) + cliente.getPrimerApellido().substring(1).toLowerCase();
         }
-        EmpleadoTO empleado = empleadoDao.findByUsuario(idUsuario);
-        return empleado.getPrimerNombre().substring(0,1) + empleado.getPrimerNombre().substring(1).toLowerCase()
-                + " " + empleado.getPrimerApellido().substring(0,1) + empleado.getPrimerApellido().substring(1).toLowerCase();
+        return "";        
     } 
     
 }

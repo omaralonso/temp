@@ -60,10 +60,7 @@ public class ClienteTO implements Serializable {
     @OneToOne(fetch = FetchType.EAGER)
     @JoinColumn(name = "id_usuario")
     private UsuarioTO usuario;
-
-    @OneToOne(mappedBy="cliente", fetch=FetchType.EAGER)
-    private DistribuidorTO distribuidor;
-            
+        
     public ClienteTO() {
     }
 
@@ -155,14 +152,6 @@ public class ClienteTO implements Serializable {
         this.usuario = usuario;
     }
     
-    public DistribuidorTO getDistribuidor(){
-        return distribuidor;
-    }
-
-    public void setDistribuidor(DistribuidorTO distribuidor) {
-        this.distribuidor = distribuidor;
-    }
-
     @Override
     public int hashCode() {
         int hash = 3;

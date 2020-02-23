@@ -8,9 +8,7 @@ package pe.com.sunshineandina.service.impl;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
-import pe.com.sunshineandina.dao.ParametroDAO;
 import pe.com.sunshineandina.dao.ProductoDAO;
-import pe.com.sunshineandina.dto.ParametroTO;
 import pe.com.sunshineandina.service.ProductoPaginadoService;
 import pe.com.sunshineandina.util.Constantes;
 
@@ -25,14 +23,9 @@ public class ProductoPaginadoServiceImpl implements ProductoPaginadoService{
     @Autowired
     private ProductoDAO productoDao;
     
-    @Autowired
-    private ParametroDAO parametroDAO;
-    
     @Override
     public int productoPaginaInicio() {
-        /* Hallamos la cantidad de productos por pagina */
-        ParametroTO parametro = parametroDAO.findByDescParametro(Constantes.PARAMETRIA_PRODUCTOS_POR_PAGINA);
-        int cantidadProductosPorPagina = Integer.parseInt(parametro.getValorParametro());
+        int cantidadProductosPorPagina = Integer.parseInt(Constantes.PARAMETRIA_PRODUCTOS_POR_PAGINA);
         int cantidadProductos = productoDao.cantidadProductos();
         int cantidadPaginas = cantidadProductos / cantidadProductosPorPagina;
         return cantidadPaginas;

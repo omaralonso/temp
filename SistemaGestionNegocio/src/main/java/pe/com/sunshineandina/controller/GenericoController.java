@@ -18,7 +18,6 @@ import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.ResponseBody;
 import pe.com.sunshineandina.dto.ClienteTO;
-import pe.com.sunshineandina.dto.EmpleadoTO;
 import pe.com.sunshineandina.dto.PerfilTO;
 import pe.com.sunshineandina.dto.UsuarioTO;
 import pe.com.sunshineandina.service.DatosPersonalesService;
@@ -46,7 +45,7 @@ public class GenericoController {
         /* 1 si es Cliente, 0 si no lo es */
         switch (codPerfil) {
             case Constantes.PERFIL_CLIENTE:
-            case Constantes.PERFIL_DISTRIBUIDOR:
+            default:
                 ClienteTO cliente = datosPersonalesService.findClienteByUsuario(usuario.getIdUsuario());
                 model.addAttribute("primerNombre", cliente.getPrimerNombre());
                 model.addAttribute("segundoNombre", cliente.getSegundoNombre());
@@ -58,19 +57,6 @@ public class GenericoController {
                 model.addAttribute("dni", cliente.getDni());
                 model.addAttribute("direccion", cliente.getDireccion());
                 model.addAttribute("email", cliente.getEmail());
-                break;
-            case Constantes.PERFIL_ENCARGADO_INV:
-            case Constantes.PERFIL_ENCARGADO_ADM:
-            case Constantes.PERFIL_ENCARGADO_VENTAS:
-                EmpleadoTO empleado = datosPersonalesService.findEmpleadoByUsuario(usuario.getIdUsuario());
-                model.addAttribute("primerNombre", empleado.getPrimerNombre());
-                model.addAttribute("segundoNombre", empleado.getSegundoNombre());
-                model.addAttribute("primerApellido", empleado.getPrimerApellido());
-                model.addAttribute("segundoApellido", empleado.getSegundoApellido());
-                model.addAttribute("telFijo", empleado.getTelefonoFijo());
-                model.addAttribute("telCelular", empleado.getTelefonoCelular());
-                model.addAttribute("email", empleado.getEmail());
-                model.addAttribute("ruc", empleado.getRuc());
                 break;
         }
 
@@ -89,7 +75,7 @@ public class GenericoController {
         /* 1 si es Cliente, 0 si no lo es */
         switch (codPerfil) {
             case Constantes.PERFIL_CLIENTE:
-            case Constantes.PERFIL_DISTRIBUIDOR:
+            default:
                 ClienteTO cliente = datosPersonalesService.findClienteByUsuario(usuario.getIdUsuario());
                 model.addAttribute("primerNombre", cliente.getPrimerNombre());
                 model.addAttribute("segundoNombre", cliente.getSegundoNombre());
@@ -101,19 +87,6 @@ public class GenericoController {
                 model.addAttribute("dni", cliente.getDni());
                 model.addAttribute("direccion", cliente.getDireccion());
                 model.addAttribute("email", cliente.getEmail());
-                break;
-            case Constantes.PERFIL_ENCARGADO_INV:
-            case Constantes.PERFIL_ENCARGADO_ADM:
-            case Constantes.PERFIL_ENCARGADO_VENTAS:
-                EmpleadoTO empleado = datosPersonalesService.findEmpleadoByUsuario(usuario.getIdUsuario());
-                model.addAttribute("primerNombre", empleado.getPrimerNombre());
-                model.addAttribute("segundoNombre", empleado.getSegundoNombre());
-                model.addAttribute("primerApellido", empleado.getPrimerApellido());
-                model.addAttribute("segundoApellido", empleado.getSegundoApellido());
-                model.addAttribute("telFijo", empleado.getTelefonoFijo());
-                model.addAttribute("telCelular", empleado.getTelefonoCelular());
-                model.addAttribute("email", empleado.getEmail());
-                model.addAttribute("ruc", empleado.getRuc());
                 break;
         }
         
@@ -141,13 +114,7 @@ public class GenericoController {
             cliente.setTelefonoFijo(telFijo);
             cliente.setTelefonoCelular(telCelular);
             datosPersonalesService.actualizarDatosCliente(cliente);
-        } else {
-            EmpleadoTO empleado = datosPersonalesService.findEmpleadoByUsuario(idUsuario);
-            empleado.setEmail(email);
-            empleado.setTelefonoCelular(telCelular);
-            empleado.setTelefonoFijo(telFijo);
-            datosPersonalesService.actualizarDatosEmpleado(empleado);
-        }
+        } 
 
         return "redirect:/perfil";
     }

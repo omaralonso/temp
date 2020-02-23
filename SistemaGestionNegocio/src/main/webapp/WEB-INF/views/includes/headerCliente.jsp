@@ -37,16 +37,14 @@
     </li>
 </ul>
          
-<c:if test="${sessionScope.perfil.codigoPerfil eq 'DIS'}">
 <ul class="navbar-nav mr-auto">
     <li class="nav-item nav-item-section">
-        <a class="nav-link" href="${pageContext.request.contextPath}/distribuidor/listaComisiones">
+        <a class="nav-link" href="${pageContext.request.contextPath}/informacion/acercade">
             <i class="fa fa-money" aria-hidden="true"></i>
-            Comisiones
+            Acerca de
         </a>
     </li>
 </ul>
-</c:if>
 <!-- Fin cuerpo nav -->
 
 <%@ include file="../includes/navfooter.jsp"%>

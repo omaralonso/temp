@@ -78,12 +78,10 @@ public class LoginController {
                 return "redirect:/admin/listaEmpleados";
             case Constantes.PERFIL_ENCARGADO_VENTAS:
                 return "redirect:/ventas/listaPedidos";
-            case Constantes.PERFIL_DISTRIBUIDOR:
-                return "redirect:/distribuidor/listaComisiones";
             case Constantes.PERFIL_CLIENTE:
                 return "redirect:/tienda/productos";
             default:
-                return "redirect:/";
+                return "redirect:/tienda/productos";
         }
     }
 

@@ -35,16 +35,9 @@
                             <button class="btn btn-sm btn-editar-cliente" data-toggle="modal" data-target="#modalEditarCliente" data-idcliente="${cliente.idCliente}">
                                 <span class="fa fa-pencil fa-2x"></span>
                             </button>
-                            <c:choose>
-                                <c:when test="${cliente.distribuidor.estadoDistribuidor == 1}">
-                                    DISTRIBUIDOR
-                                </c:when>
-                                <c:otherwise>
-                                    NORMAL
-                                </c:otherwise>
-                            </c:choose>
-                         </td>
-                        </tr>
+                            NORMAL
+                        </td>
+                    </tr>
                 </c:forEach>
             </tbody>
         </table>
@@ -63,10 +56,9 @@
                     <form>
                         <input type="hidden" name="idcliente">
                         <select  class="form-control" name="cliente" id="txtCliente">
-                            <option value="">Distribuidor</option>
                             <option value="">Normal</option>
                         </select>
-                        <p><small><b>Nota:</b> Solo un cliente distribuidor accede a descuentos exclusivos por la compra de productos de la tienda.</small></p>
+                        <p><small><b>Nota:</b> Actualmente solo se soporta 1 tipo de cliente</small></p>
                     </form>
                 </div>
                 <div class="modal-footer">

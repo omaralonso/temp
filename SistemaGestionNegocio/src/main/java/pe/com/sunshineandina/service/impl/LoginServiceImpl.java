@@ -13,14 +13,11 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 import pe.com.sunshineandina.dao.ClienteDAO;
-import pe.com.sunshineandina.dao.EmpleadoDAO;
-import pe.com.sunshineandina.dao.PerfilDAO;
 import pe.com.sunshineandina.dao.UsuarioDAO;
 import pe.com.sunshineandina.dto.PerfilTO;
 import pe.com.sunshineandina.dto.UsuarioTO;
 import pe.com.sunshineandina.service.LoginService;
 import pe.com.sunshineandina.util.Constantes;
-import pe.com.sunshineandina.util.HashPassword;
 
 /**
  *

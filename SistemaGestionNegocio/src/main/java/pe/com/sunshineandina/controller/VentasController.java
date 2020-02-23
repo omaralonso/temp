@@ -11,7 +11,6 @@ import com.fasterxml.jackson.databind.node.ObjectNode;
 import java.math.BigDecimal;
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
-import java.util.Calendar;
 import java.util.Date;
 import java.util.List;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -25,7 +24,6 @@ import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.ResponseBody;
 import pe.com.sunshineandina.dto.CategoriaTO;
 import pe.com.sunshineandina.dto.ClienteTO;
-import pe.com.sunshineandina.dto.DistribuidorTO;
 import pe.com.sunshineandina.dto.OfertaTO;
 import pe.com.sunshineandina.dto.PedidoTO;
 import pe.com.sunshineandina.dto.ProductoTO;
@@ -33,8 +31,6 @@ import pe.com.sunshineandina.mapper.RequestMapper;
 import pe.com.sunshineandina.request.RegistroPedidoRequest;
 import pe.com.sunshineandina.service.CategoriaService;
 import pe.com.sunshineandina.service.ClienteService;
-import pe.com.sunshineandina.service.DistribuidorService;
-import pe.com.sunshineandina.service.HistoricoDistribuidorService;
 import pe.com.sunshineandina.service.OfertaService;
 import pe.com.sunshineandina.service.PedidoService;
 import pe.com.sunshineandina.service.ProductoService;
@@ -61,12 +57,6 @@ public class VentasController {
 
     @Autowired
     private ProductoService productoService;
-
-    @Autowired
-    private HistoricoDistribuidorService historicoDistribuidorService;
-
-    @Autowired
-    private DistribuidorService distribuidorService;
 
     @RequestMapping(value = "/listaPedidos", method = RequestMethod.GET)
     public String listaPedidos(Model model) {
@@ -114,34 +104,6 @@ public class VentasController {
         pedido.setIdPedido(idPedido);
         pedido.setEstadoPedido(estadoPedido);
         pedidoService.actualizarPedido(pedido);
-    }
-
-    @RequestMapping(value = "/editarCliente", method = RequestMethod.POST)
-    @ResponseBody
-    public ClienteTO editarCliente(@RequestBody ObjectNode nodoJson) {
-        int idCliente = nodoJson.get("idCliente").asInt();
-        ClienteTO cliente = clienteService.findById(idCliente);
-        ClienteTO clienteJson = new ClienteTO();
-        clienteJson.setIdCliente(cliente.getIdCliente());
-        clienteJson.setPrimerNombre(cliente.getPrimerNombre());
-        clienteJson.setPrimerApellido(cliente.getPrimerApellido());
-        DistribuidorTO distribuidorJson = new DistribuidorTO();
-        if (cliente.getDistribuidor() != null) {
-            distribuidorJson.setIdDistribuidor(cliente.getDistribuidor().getIdDistribuidor());
-            distribuidorJson.setEstadoDistribuidor(cliente.getDistribuidor().getEstadoDistribuidor());
-        }
-        clienteJson.setDistribuidor(distribuidorJson);
-        return clienteJson;
-    }
-
-    @RequestMapping(value = "/actualizarCliente", method = RequestMethod.POST)
-    @ResponseBody
-    public void actualizarCliente(
-            @RequestParam("idCliente") int idCliente,
-            @RequestParam("tipoCliente") String tipoCliente) {
-        ClienteTO cliente = new ClienteTO();
-        cliente.setIdCliente(idCliente);
-        clienteService.cambiarTipoCliente(cliente, tipoCliente);
     }
 
     @RequestMapping(value = "/nuevaOferta", method = RequestMethod.GET)
@@ -243,21 +205,6 @@ public class VentasController {
         String rpta = pedidoService.registroPedido(registroPedidoRequest.getDniCliente(),
                 registroPedidoRequest.getPedido().getDetallePedidos(),
                 registroPedidoRequest.getPedido());
-
-        historicoDistribuidorService.updateBaseRegistro(registroPedidoRequest.getDniCliente(),
-                registroPedidoRequest.getPedido().getPrecioAcumuladoPedido(),
-                registroPedidoRequest.getPedido().getPuntosAcumuladoPedido());
-
-        Calendar hoy = Calendar.getInstance();
-        int mes = hoy.get(Calendar.MONTH) + 1;
-        int anio = hoy.get(Calendar.YEAR);
-
-        ClienteTO cliente = clienteService.findByDni(registroPedidoRequest.getDniCliente());
-        DistribuidorTO distribuidor = distribuidorService.findByCliente(cliente.getIdCliente());
-
-        if (distribuidor != null) {
-            distribuidorService.updateComision(distribuidor.getIdDistribuidor(), mes, anio);
-        }
 
         ObjectMapper mapper = new ObjectMapper();
         JsonNode nodoJsonRpta = mapper.createObjectNode();

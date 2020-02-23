@@ -6,7 +6,6 @@
 package pe.com.sunshineandina.service;
 
 import pe.com.sunshineandina.dto.ClienteTO;
-import pe.com.sunshineandina.dto.EmpleadoTO;
 import pe.com.sunshineandina.dto.UsuarioTO;
 
 /**
@@ -15,13 +14,9 @@ import pe.com.sunshineandina.dto.UsuarioTO;
  */
 public interface DatosPersonalesService {
     
-    EmpleadoTO findEmpleadoByUsuario(int idUsuario);
-    
     ClienteTO findClienteByUsuario(int idUsuario);
     
     void actualizarDatosCliente(ClienteTO cliente);
-    
-    void actualizarDatosEmpleado(EmpleadoTO empleado);
     
     String validarPassword(String passwordActual, String passwordNueva, String passwordConfirmacion, UsuarioTO usuario);
     

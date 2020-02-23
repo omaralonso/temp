@@ -6,7 +6,6 @@
 package pe.com.sunshineandina.controller;
 
 import com.fasterxml.jackson.databind.JsonNode;
-import java.util.Calendar;
 import java.util.List;
 import javax.servlet.http.HttpSession;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -16,12 +15,10 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.ResponseBody;
 import pe.com.sunshineandina.dto.CarritoTO;
-import pe.com.sunshineandina.dto.DistribuidorTO;
 import pe.com.sunshineandina.dto.PedidoTO;
 import pe.com.sunshineandina.dto.UsuarioTO;
 import pe.com.sunshineandina.mapper.ResponseMapper;
 import pe.com.sunshineandina.service.CarritoService;
-import pe.com.sunshineandina.service.DistribuidorService;
 import pe.com.sunshineandina.service.PedidoService;
 
 /**
@@ -36,9 +33,6 @@ public class ClienteController {
 
     @Autowired
     private PedidoService pedidoService;
-
-    @Autowired
-    private DistribuidorService distribuidorService;
 
     @RequestMapping(value = "/carrito/detalle", method = RequestMethod.GET)
     public String obtenerCarrito(HttpSession session, Model model) {
@@ -66,13 +60,6 @@ public class ClienteController {
         /* Creamos el pedido */
         String rpta = pedidoService.nuevoPedido(idUsuario);
 
-        DistribuidorTO distribuidor = distribuidorService.findByUsuario(idUsuario);
-        if (distribuidor != null) {
-            Calendar hoy = Calendar.getInstance();
-            int mes = hoy.get(Calendar.MONTH) + 1;
-            int anio = hoy.get(Calendar.YEAR);
-            distribuidorService.updateComision(distribuidor.getIdDistribuidor(), mes, anio);
-        }
         JsonNode jsonRespuesta = ResponseMapper.nuevoPedidoMapper(rpta);
 
         return jsonRespuesta;
@@ -91,6 +78,12 @@ public class ClienteController {
         model.addAttribute("pedidos", pedidos);
 
         return "cliente/pedidos";
+    }
+    
+    @RequestMapping(value = "/informacion/acercade", method = RequestMethod.GET)
+    public String mostarInformacion(HttpSession session, Model model) {
+
+        return "informacion/acercade";
     }
     
 }

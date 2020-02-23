@@ -10,7 +10,7 @@
     <link rel="stylesheet" href="${pageContext.request.contextPath}/resources/lib/jquery/jquery-ui/jquery-ui.css">
     <meta name="viewport" content="width=device-width,initial-scale=1, user-scalable=no">
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/> 
-    <title>Sunshine Andina S.A.</title>
+    <title>Bruno Minelli S.A.</title>
   </head>
 <body>
 <!-- Fin Head -->
