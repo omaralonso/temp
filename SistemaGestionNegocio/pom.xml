@@ -13,7 +13,7 @@
         <spring.framework.version>4.3.12.RELEASE</spring.framework.version>
         <hibernate.version>4.3.11.Final</hibernate.version>
         <mysql.jdbc.connector.version>5.1.43</mysql.jdbc.connector.version>
-        <jackson.version>2.9.2</jackson.version>
+        <jackson.version>2.9.10.8</jackson.version>
     </properties>
     <dependencies>
         <!-- Spring framework -->  
